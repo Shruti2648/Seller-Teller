@@ -2,7 +2,7 @@
 // sometimes causes errors on Windows machines
 var bcrypt = require("bcrypt-nodejs");
 // Creating our User model
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
     // The email cannot be null, and must be a proper email before creation
     email: {
@@ -20,7 +20,7 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
 
-  User.associate = function (models) {
+  User.associate = function(models) {
     User.hasMany(models.Post, {
       onDelete: "cascade"
     });
