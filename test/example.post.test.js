@@ -3,16 +3,13 @@ var chaiHttp = require("chai-http");
 var server = require("../server");
 var db = require("../models");
 var expect = chai.expect;
-var describe = require("mocha").describe;
-var it = require("mocha").it;
-var beforeEach = require("mocha").beforeEach;
 
 // Setting up the chai http plugin
 chai.use(chaiHttp);
 
 var request;
 
-describe("POST /api/examples", function() {
+describe("POST /api/signup", function() {
   // Before each test begins, create a new request server for testing
   // & delete all examples from the db
   beforeEach(function() {
@@ -20,16 +17,16 @@ describe("POST /api/examples", function() {
     return db.sequelize.sync({ force: true });
   });
 
-  it("should save an example", function(done) {
+  it("should save an user", function(done) {
     // Create an object to send to the endpoint
     var reqBody = {
-      text: "Example text",
-      description: "Example description"
+      email: "Example email",
+      password: "Example password"
     };
 
     // POST the request body to the server
     request
-      .post("/api/examples")
+      .post("/api/signup")
       .send(reqBody)
       .end(function(err, res) {
         var responseStatus = res.status;
