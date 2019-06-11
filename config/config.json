@@ -1,22 +1,14 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
-    "password": "catfood",
-=======
     "password": "Pawel",
->>>>>>> b8fa4f0bc5ccde66dddd8071d20b5d0f8ce4992e
     "database": "exampledb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-<<<<<<< HEAD
-    "password": "catfood",
-=======
     "password": "Pawel",
->>>>>>> b8fa4f0bc5ccde66dddd8071d20b5d0f8ce4992e
     "database": "testdb",
     "host": "127.0.0.1",
     "dialect": "mysql"
