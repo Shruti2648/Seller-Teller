@@ -17,6 +17,12 @@ app.use(express.static("public"));
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
 );
+app.set("view engine", "handlebars");
+
+// Routes
+require("./routes/htmlRoutes")(app);
+require("./routes/apiUserRoutes")(app);
+require("./routes/apiPostRoutes")(app);
 app.use(passport.initialize());
 app.use(passport.session());
 
