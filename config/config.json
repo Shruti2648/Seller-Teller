@@ -2,10 +2,14 @@
   "development": {
     "username": "root",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "password": "catfood",
 =======
     "password": "Pawel",
 >>>>>>> b8fa4f0bc5ccde66dddd8071d20b5d0f8ce4992e
+=======
+    "password": "Pawel",
+>>>>>>> 008636bf889cd73a64314137984aacc6723b9229
     "database": "exampledb",
     "host": "localhost",
     "dialect": "mysql"
@@ -13,10 +17,14 @@
   "test": {
     "username": "root",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "password": "catfood",
 =======
     "password": "Pawel",
 >>>>>>> b8fa4f0bc5ccde66dddd8071d20b5d0f8ce4992e
+=======
+    "password": "Pawel",
+>>>>>>> 008636bf889cd73a64314137984aacc6723b9229
     "database": "testdb",
     "host": "127.0.0.1",
     "dialect": "mysql"
