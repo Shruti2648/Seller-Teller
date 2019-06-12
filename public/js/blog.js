@@ -23,7 +23,6 @@ $(document).ready(function() {
     getPosts();
   }
 
-
   // This function grabs posts from the database and updates the view
   function getPosts(user) {
     userId = user || "";
@@ -35,8 +34,7 @@ $(document).ready(function() {
       posts = data;
       if (!posts || !posts.length) {
         displayEmpty(user);
-      }
-      else {
+      } else {
         initializeRows();
       }
     });
@@ -47,10 +45,9 @@ $(document).ready(function() {
     $.ajax({
       method: "DELETE",
       url: "/api/posts/" + id
-    })
-      .then(function() {
-        getPosts(postCategorySelect.val());
-      });
+    }).then(function() {
+      getPosts(postCategorySelect.val());
+    });
   }
 
   // InitializeRows handles appending all of our constructed post HTML inside blogContainer
@@ -84,8 +81,7 @@ $(document).ready(function() {
     newPostUser.css({
       float: "right",
       color: "blue",
-      "margin-top":
-      "-10px"
+      "margin-top": "-10px"
     });
     var newPostCardBody = $("<div>");
     newPostCardBody.addClass("card-body");
@@ -133,9 +129,13 @@ $(document).ready(function() {
     blogContainer.empty();
     var messageH2 = $("<h2>");
     messageH2.css({ "text-align": "center", "margin-top": "50px" });
-    messageH2.html("No posts yet" + partial + ", navigate <a href='/cms" + query +
-    "'>here</a> in order to get started.");
+    messageH2.html(
+      "No posts yet" +
+        partial +
+        ", navigate <a href='/cms" +
+        query +
+        "'>here</a> in order to get started."
+    );
     blogContainer.append(messageH2);
   }
-
 });

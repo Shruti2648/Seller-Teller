@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Getting jQuery references to the post body, title, form, and user select
   var bodyInput = $("#body");
   var titleInput = $("#title");
@@ -31,17 +31,17 @@ $(document).ready(function() {
   function handleFormSubmit(event) {
     event.preventDefault();
     // Wont submit the post if we are missing a body, title, or user
-    if (!titleInput.val().trim() || !bodyInput.val().trim() || !userSelect.val()) {
+    if (
+      !titleInput.val().trim() ||
+      !bodyInput.val().trim() ||
+      !userSelect.val()
+    ) {
       return;
     }
     // Constructing a newPost object to hand to the database
     var newPost = {
-      title: titleInput
-        .val()
-        .trim(),
-      body: bodyInput
-        .val()
-        .trim(),
+      title: titleInput.val().trim(),
+      body: bodyInput.val().trim(),
       UserId: userSelect.val()
     };
 
@@ -50,15 +50,14 @@ $(document).ready(function() {
     if (updating) {
       newPost.id = postId;
       updatePost(newPost);
-    }
-    else {
+    } else {
       submitPost(newPost);
     }
   }
 
   // Submits a new post and brings user to blog page upon completion
   function submitPost(post) {
-    $.post("/api/posts", post, function() {
+    $.post("/api/posts", post, function () {
       window.location.href = "/blog";
     });
   }
@@ -67,16 +66,16 @@ $(document).ready(function() {
   function getPostData(id, type) {
     var queryUrl;
     switch (type) {
-    case "post":
-      queryUrl = "/api/posts/" + id;
-      break;
-    case "user":
-      queryUrl = "/api/users/" + id;
-      break;
-    default:
-      return;
+      case "post":
+        queryUrl = "../api/posts/" + id;
+        break;
+      case "user":
+        queryUrl = "../api/users/" + id;
+        break;
+      default:
+        return;
     }
-    $.get(queryUrl, function(data) {
+    $.get(queryUrl, function (data) {
       if (data) {
         console.log(data.UserId || data.id);
         // If this post exists, prefill our cms forms with its data
@@ -126,9 +125,8 @@ $(document).ready(function() {
       method: "PUT",
       url: "/api/posts",
       data: post
-    })
-      .then(function() {
-        window.location.href = "/blog";
-      });
+    }).then(function () {
+      window.location.href = "/blog";
+    });
   }
 });
