@@ -15,11 +15,20 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Post.associate = function(models) {
+<<<<<<< HEAD
     Post.belongsTo(models.User, {
       foreignKey: {
         allowNull: false
       },
       onDelete: "cascade"
+=======
+    // We're saying that a Post should belong to an User
+    // A Post can't be created without an User due to the foreign key constraint
+    Post.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+>>>>>>> f07564a4953880de6464988ae7779fac8e337b36
     });
   };
 

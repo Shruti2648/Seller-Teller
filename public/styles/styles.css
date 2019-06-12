@@ -1,355 +1,3 @@
-.list-group-item {
-  line-height: 2.5;
-}
-
-/* YANGYIN'S STYLES */
-
-
-form.signup,
-form.login {
-  margin-top: 50px;
-}
-
-:root {
-  --input-padding-x: 1.5rem;
-  --input-padding-y: .75rem;
-}
-
-body {
-  background: #007bff;
-  background: linear-gradient(to right, #0062E6, #33AEFF);
-}
-
-.card-signin {
-  border: 0;
-  border-radius: 1rem;
-  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.card-signin .card-title {
-  margin-bottom: 2rem;
-  font-weight: 300;
-  font-size: 1.5rem;
-}
-
-.card-signin .card-img-left {
-  width: 45%;
-  /* Link to your background image using in the property below! */
-  background: scroll center url('https://source.unsplash.com/WEQbe2jBg40/414x512');
-  background-size: cover;
-}
-
-.card-signin .card-body {
-  padding: 2rem;
-}
-
-.form-signin {
-  width: 100%;
-}
-
-.form-signin .btn {
-  font-size: 80%;
-  border-radius: 5rem;
-  letter-spacing: .1rem;
-  font-weight: bold;
-  padding: 1rem;
-  transition: all 0.2s;
-}
-
-.form-label-group {
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-.form-label-group input {
-  height: auto;
-  border-radius: 2rem;
-}
-
-.form-label-group>input,
-.form-label-group>label {
-  padding: var(--input-padding-y) var(--input-padding-x);
-}
-
-.form-label-group>label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  margin-bottom: 0;
-  /* Override default `<label>` margin */
-  line-height: 1.5;
-  color: #495057;
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  transition: all .1s ease-in-out;
-}
-
-.form-label-group input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.form-label-group input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.form-label-group input::-ms-input-placeholder {
-  color: transparent;
-}
-
-.form-label-group input::-moz-placeholder {
-  color: transparent;
-}
-
-.form-label-group input::placeholder {
-  color: transparent;
-}
-
-.form-label-group input:not(:placeholder-shown) {
-  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
-  padding-bottom: calc(var(--input-padding-y) / 3);
-}
-
-.form-label-group input:not(:placeholder-shown)~label {
-  padding-top: calc(var(--input-padding-y) / 3);
-  padding-bottom: calc(var(--input-padding-y) / 3);
-  font-size: 12px;
-  color: #777;
-}
-
-.btn-google {
-  color: white;
-  background-color: #ea4335;
-}
-
-.btn-facebook {
-  color: white;
-  background-color: #3b5998;
-}
-
-:root {
-  --input-padding-x: 1.5rem;
-  --input-padding-y: 0.75rem;
-}
-
-.login,
-.image {
-  min-height: 100vh;
-}
-
-.bg-image {
-  background-image: url('https://source.unsplash.com/WEQbe2jBg40/600x1200');
-  background-size: cover;
-  background-position: center;
-}
-
-.login-heading {
-  font-weight: 300;
-}
-
-.btn-login {
-  font-size: 0.9rem;
-  letter-spacing: 0.05rem;
-  padding: 0.75rem 1rem;
-  border-radius: 2rem;
-}
-
-.form-label-group {
-  position: relative;
-  margin-bottom: 1rem;
-}
-
-.form-label-group>input,
-.form-label-group>label {
-  padding: var(--input-padding-y) var(--input-padding-x);
-  height: auto;
-  border-radius: 2rem;
-}
-
-.form-label-group>label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  margin-bottom: 0;
-  /* Override default `<label>` margin */
-  line-height: 1.5;
-  color: #495057;
-  cursor: text;
-  /* Match the input under the label */
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  transition: all .1s ease-in-out;
-}
-
-.form-label-group input::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.form-label-group input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.form-label-group input::-ms-input-placeholder {
-  color: transparent;
-}
-
-.form-label-group input::-moz-placeholder {
-  color: transparent;
-}
-
-.form-label-group input::placeholder {
-  color: transparent;
-}
-
-.form-label-group input:not(:placeholder-shown) {
-  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
-  padding-bottom: calc(var(--input-padding-y) / 3);
-}
-
-.form-label-group input:not(:placeholder-shown)~label {
-  padding-top: calc(var(--input-padding-y) / 3);
-  padding-bottom: calc(var(--input-padding-y) / 3);
-  font-size: 12px;
-  color: #777;
-}
-
-/* Fallback for Edge
--------------------------------------------------- */
-
-@supports (-ms-ime-align: auto) {
-  .form-label-group>label {
-    display: none;
-  }
-  .form-label-group input::-ms-input-placeholder {
-    color: #777;
-  }
-}
-
-/* Fallback for IE
--------------------------------------------------- */
-
-@media all and (-ms-high-contrast: none),
-(-ms-high-contrast: active) {
-  .form-label-group>label {
-    display: none;
-  }
-  .form-label-group input:-ms-input-placeholder {
-    color: #777;
-  }
-}
-
-* {
-    box-sizing: border-box;
-}
-body{
-    font-size: 200%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-color: black !important;
-    padding-right: 35px;
-    padding-left: 120px;
-    padding-top: 20px;
-    padding-bottom:50px;
-    width: 85%;
-    length: 10px;
-    margin: 0px 39.2344px 0px 39.2188px;
-}
-.jumbotron{
-    font-family:  'Great Vibes', cursive;
-    src: url(sansation_bold.woff);
-    font-weight: bold;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
-    color: white;
-    background-image: url("https://thumbs.gfycat.com/AmbitiousReasonableHornet-size_restricted.gif") !important;
-    text-align: center;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 20px #fff,
-    0 0 40px teal,
-    0 0 80px teal,
-    0 0 90px teal,
-    0 0 100px teal,
-    0 0 150px teal;
-}
-.container {
-    display: inline-block;
-    cursor: pointer;
-}
-.btn-primary{
-    height: 30px;
-    color: black;
-    border-color: white;
-    background-image: url("https://thumbs.gfycat.com/EqualDeadAmberpenshell-small.gif") !important;
-    padding: 30px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
-.div{
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
-}
-.bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
-}
-.change .bar2 {
-    opacity: 0;
-}
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
-}
-.nav-icon {
-   color: white;
-   -webkit-animation: glow 1s ease-in-out infinite alternate;
-   text-shadow:
-   0 0 5px #fff,
-   0 0 40px white,
-   0 0 90px whitesmoke,
-   0 0 100px whitesmoke,
-   0 0 150px white;
-}
-.navbarToggleExternalContent {
-    color: none,
-}
-
-.sales {
-    color: white;
-    font-size: 18px;
-}
-
-.sales-text {
-    font-size: 15px;
-}
-
-.card-link {
-    font-size: 15px;
-}
-
-.form-text {
-    font-size: 18px;
-}
-
-/* SHRUTI'S STYLES */
-
 * {
   box-sizing: border-box;
 }
@@ -359,13 +7,13 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-color: black !important;
-  padding-right: 35px;
+  /* padding-right: 35px;
   padding-left: 120px;
   padding-top: 20px;
   padding-bottom:50px;
   width: 85%;
   length: 10px;
-  margin: 0px 39.2344px 0px 39.2188px;
+  margin: 0px 40px 0px 40px; */
 }
 .jumbotron{
   font-family:  'Great Vibes', cursive;
@@ -405,7 +53,11 @@ body{
   width: 35px;
   height: 5px;
   background-color: black;
+<<<<<<< HEAD
   margin: 6px 0;
+=======
+  /* margin: 6px 0; */
+>>>>>>> f07564a4953880de6464988ae7779fac8e337b36
 }
 .bar1, .bar2, .bar3 {
   width: 35px;
@@ -438,11 +90,15 @@ body{
 .navbarToggleExternalContent {
   color: none,
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f07564a4953880de6464988ae7779fac8e337b36
 .sales {
   color: white;
   font-size: 18px;
 }
+<<<<<<< HEAD
 
 .sales-text {
   font-size: 15px;
@@ -452,6 +108,14 @@ body{
   font-size: 15px;
 }
 
+=======
+.sales-text {
+  font-size: 15px;
+}
+.card-link {
+  font-size: 15px;
+}
+>>>>>>> f07564a4953880de6464988ae7779fac8e337b36
 .form-text {
   font-size: 18px;
 }
