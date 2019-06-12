@@ -16,8 +16,4 @@ module.exports = function(app) {
   app.get("/add-sale", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/add-sale.html"));
   });
-
-  // app.get("*", function(req, res) {
-  //   res.render("404");
-  // });
 };
