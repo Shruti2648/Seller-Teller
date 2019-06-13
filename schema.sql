@@ -1,4 +1,4 @@
--- Drops the blogger if it exists currently --
-DROP DATABASE IF EXISTS blogger;
--- Creates the "blogger" database --
-CREATE DATABASE blogger;
+-- Drops the sale if it exists currently --
+DROP DATABASE IF EXISTS sale;
+-- Creates the "sale" database --
+CREATE DATABASE sale;

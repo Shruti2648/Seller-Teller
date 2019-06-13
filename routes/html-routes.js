@@ -13,20 +13,33 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 // =============================================================
 module.exports = function(app) {
   // Each of the below routes just handles the HTML page that the user gets sent to.
-
-  // index route loads view.html
-  // app.get("/", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/signup.html"));
-  // });
-
   // cms route loads cms.html
-  app.get("/cms", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/cms.html"));
+  app.get("/", function(req, res) {
+    if (req.user) {
+      res.redirect("/home");
+    }
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
+  });
+
+  app.get("/home", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/home.html"));
+  });
+
+  app.get("/search", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/search.html"));
   });
 
   // blog route loads blog.html
   app.get("/blog", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/blog.html"));
+  });
+
+  app.get("/browse", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/browse.html"));
+  });
+
+  app.get("/add-sale", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/add-sale.html"));
   });
 
   // users route loads user-manager.html

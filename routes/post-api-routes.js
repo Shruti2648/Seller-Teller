@@ -13,31 +13,33 @@ var db = require("../models");
 module.exports = function(app) {
   // GET route for getting all of the posts
   app.get("/api/posts", function(req, res) {
-    var query = {};
-    if (req.query.user_id) {
-      query.UserId = req.query.user_id;
-    }
+    // var query = {};
+    // if (req.query.user_id) {
+    //   query.UserId = req.query.user_id;
+    // }
     // Here we add an "include" property to our options in our findAll query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.User
     db.Post.findAll({
-      where: query,
-      include: [db.User]
+      // where: query,
+      // include: [db.User]
     }).then(function(dbPost) {
       res.json(dbPost);
     });
   });
 
   // Get route for retrieving a single post
-  app.get("/api/posts/:id", function(req, res) {
+  app.get("/api/posts/:state/:city", function(req, res) {
     // Here we add an "include" property to our options in our findOne query
     // We set the value to an array of the models we want to include in a left outer join
     // In this case, just db.User
-    db.Post.findOne({
+    console.log(req);
+    db.Post.findAll({
       where: {
-        id: req.params.id
-      },
-      include: [db.User]
+        storeState: req.params.state,
+        storeCity: req.params.city
+      }
+      // include: [db.User]
     }).then(function(dbPost) {
       res.json(dbPost);
     });
