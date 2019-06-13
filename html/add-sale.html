@@ -11,18 +11,18 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../styles/styles.css">
+  <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-
-  <div class="navbar navvar-expand-sm justify-content-end">
-    <a class="active" href="index.html"><i class="fa fa-fw nav-icon fa-home"></i></a>
-    <a href="search.html"><i class="fa fa-fw nav-icon fa-search"></i></a>
-    <a href="browse.html"><i class="fa fa-fw nav-icon fa-envelope"></i></a>
-    <a href="add-sale.html"><i class="fa fa-fw nav-icon fa-plus"></i>
+  
+  <!-- <div class="navbar navvar-expand-sm justify-content-end">
+    <a class="active" href="#"><i class="fa fa-fw nav-icon fa-home"></i></a>
+    <a href="#"><i class="fa fa-fw nav-icon fa-search"></i></a>
+    <a href="#"><i class="fa fa-fw nav-icon fa-envelope"></i></a>
+    <a href="#"><i class="fa fa-fw nav-icon fa-user"></i></a>
   </div>
   <div class="pos-f-t">
     <div class="collapse" id="navbarToggleExternalContent">
@@ -31,15 +31,45 @@
         <span class="text-muted"></span>
       </div>
     </div>
+    <nav class="navbar navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+        aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
   </div>
-  </div>
+  </div> -->
 
-  <div class="jumbotron text-center">
-    <h1 class="display-3">Add A Sale!</h1>
-  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">To Do App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="task-add.html">Add A Task</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="to-do-list.html">To Do List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="completed-tasks.html">Completed Tasks</a>
+      </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+    </nav>
 
   <div class="container text-white">
-    <h1 class="display-5">Add A Sale</h1>
+    <h1 class="display-6">Add A Sale</h1>
     <form class="form-text">
         <div class="form-group">
             <label for="discount" class="font-weight-bold">Sale</label>
