@@ -35,6 +35,26 @@ body{
   0 0 100px teal,
   0 0 150px teal;
 }
+.jumbotron-search{
+  font-family:  'Great Vibes', cursive;
+  src: url(sansation_bold.woff);
+  font-weight: bold;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+  color: white;
+  background-image: url("https://thumbs.gfycat.com/ComplicatedFrailCatbird-size_restricted.gif") !important;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  text-shadow:
+  0 0 5px #fff,
+  0 0 10px #fff,
+  0 0 20px #fff,
+  0 0 40px teal,
+  0 0 80px teal,
+  0 0 90px teal,
+  0 0 100px teal,
+  0 0 150px teal;
+}
 .container {
   display: inline-block;
   cursor: pointer;
@@ -49,6 +69,8 @@ body{
   text-decoration: none;
   display: inline-block;
 }
+
+
 .div{
   width: 35px;
   height: 5px;
