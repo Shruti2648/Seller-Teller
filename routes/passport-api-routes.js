@@ -28,14 +28,14 @@ module.exports = function(app) {
       .catch(function(err) {
         console.log(err);
         res.json(err);
-        // res.status(422).json(err.errors[0].message);
+        res.status(422).json(err.errors[0].message);
       });
   });
 
   // Route for logging user out
   app.get("/logout", function(req, res) {
     req.logout();
-    res.redirect("/");
+    res.render("index");
   });
 
   // Route for getting some data about our user to be used client side

@@ -1,0 +1,62 @@
+<head>
+  <link rel="stylesheet" href="../styles/login.css">
+</head>
+
+
+<div class="row">
+  <div class="col-lg-10 col-xl-9 mx-auto">
+    <div class="card card-signin flex-row my-5">
+      <div class="card-img-left d-none d-md-flex">
+        <!-- Background image for card set in CSS! -->
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-center">Sign Up</h5>
+        <!-- <form class="form-signin"> -->
+        <form class="signup">
+          <!-- <div class="form-label-group">
+                <input type="text" id="inputUserame" class="form-control" placeholder="Username" required autofocus>
+                <label for="inputUserame">Username</label>
+              </div> -->
+
+          <!-- <div class="form-label-group"> -->
+          <div class="form-group">
+            <!-- <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                <label for="inputEmail">Email address</label> -->
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
+
+          <!-- <hr> -->
+
+          <!-- <div class="form-label-group"> -->
+          <div class="form-group">
+            <!-- <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <label for="inputPassword">Password</label> -->
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span> <span class="msg"></span>
+          </div>
+
+          <!-- <div class="form-label-group">
+                <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
+                <label for="inputConfirmPassword">Confirm password</label>
+              </div> -->
+
+          <!-- <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button> -->
+          <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" class="btn btn-default">Sign
+            Up</button>
+        </form>
+
+        <a class="d-block text-center mt-2 small" href="login">Log In</a>
+        <!-- <hr class="my-4"> -->
+        <!-- <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i>
+                Sign up with Google</button>
+              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i>
+                Sign up with Facebook</button> -->
+      </div>
+    </div>
+  </div>
+</div>

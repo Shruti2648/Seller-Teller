@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "YHuPass123$",
-    "database": "sale",
+    "database": "sale_db",
     "host": "localhost",
     "port": 3306,
     "dialect": "mysql"
