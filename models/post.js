@@ -8,8 +8,7 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     storeCategory: {
-      type: DataTypes.STRING,
-      allowNull: true
+      type: DataTypes.STRING
     },
     sale: {
       type: DataTypes.TEXT,
@@ -17,20 +16,18 @@ module.exports = function(sequelize, DataTypes) {
       len: [1]
     },
     storeCity: {
-      type: DataTypes.STRING,
-      allowNull: true
+      type: DataTypes.STRING
     },
     storeState: {
-      type: DataTypes.STRING,
-      allowNull: true
+      type: DataTypes.STRING
     },
     startDate: {
       type: DataTypes.DATE,
-      allowNull: true
+      defaultValue: DataTypes.NOW
     },
     stopDate: {
       type: DataTypes.DATE,
-      allowNull: true
+      defaultValue: DataTypes.NOW
     }
   });
 

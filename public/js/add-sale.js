@@ -4,6 +4,20 @@ $(document).ready(function() {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
+    var startDateVal = $("#start-date")
+      .val()
+      .trim();
+    if (!startDateVal) {
+      startDateVal = new Date();
+    }
+
+    var stopDateVal = $("#stop-date")
+      .val()
+      .trim();
+    if (!stopDateVal) {
+      stopDateVal = new Date();
+    }
+
     var newSale = {
       storeName: $("#store-name")
         .val()
@@ -20,12 +34,14 @@ $(document).ready(function() {
       storeState: $("#store-state")
         .val()
         .trim(),
-      startDate: $("#start-date")
-        .val()
-        .trim(),
-      stopDate: $("#stop-date")
-        .val()
-        .trim()
+      // startDate: $("#start-date")
+      //   .val()
+      //   .trim(),
+      startDate: startDateVal,
+      // stopDate: $("#stop-date")
+      //   .val()
+      //   .trim()
+      stopDate: stopDateVal
     };
 
     // Send the POST request.
@@ -34,7 +50,7 @@ $(document).ready(function() {
       data: newSale
     }).then(function() {
       console.log("Created new sale");
-      window.location.href = "./browse.html";
+      window.location.href = "browse";
     });
   });
 });

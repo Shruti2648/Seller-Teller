@@ -1,0 +1,10 @@
+
+    <ul id="search-sale-table">
+      {{#each posts}}
+      <li>Sale: {{sale}}
+        <ul>
+          <li>Store: {{store}} | Store Category: {{storeCategory}}</li>
+          <li>City: {{storeCity}} | State: {{storeState}} | Start Date: {{moment startDate "L"}} | End Date: {{moment stopDate "L"}}</li>
+        </ul>
+      {{/each}}
+    </ul>

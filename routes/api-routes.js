@@ -4,7 +4,10 @@
 
 // Dependencies
 // =============================================================
-var path = require("path");
+var db = require("../models");
+var Handlebars = require("handlebars");
+var MomentHandler = require("handlebars.moment");
+MomentHandler.registerHelpers(Handlebars);
 
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
@@ -14,58 +17,74 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 module.exports = function(app) {
   // Each of the below routes just handles the HTML page that the user gets sent to.
   // cms route loads cms.html
+
   app.get("/", function(req, res) {
+    // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/home");
+      res.redirect("/members");
     }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
+    res.render("signup");
   });
 
-  app.get("/home", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
-  });
-
-  app.get("/search", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/search.html"));
-  });
-
-  // blog route loads blog.html
-  app.get("/blog", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blog.html"));
+  app.get("/index", function(req, res) {
+    res.render("index");
   });
 
   app.get("/browse", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/browse.html"));
+    db.Post.findAll({}).then(function(dbPost) {
+      // res.json(dbPost);
+      var hbsObject = {
+        posts: dbPost
+      };
+      // console.log(hbsObject);
+      res.render("browse", hbsObject);
+    });
+  });
+
+  app.get("/search", function(req, res) {
+    // if (req.query.state && req.query.city){
+    //   db.Post.findAll({
+    //     where: {
+    //       storeState: req.query.state,
+    //       storeCity: req.query.city
+    //     }
+    //   })
+    //     .then(function (dbPost) {
+    //       // res.json(dbPost);
+    //       var hbsObject = {
+    //         posts: dbPost
+    //       };
+    //       console.log(hbsObject);
+    //         res.render("search", hbsObject);
+    //     });
+    // };
+    res.render("search");
+    // res.render("search");
   });
 
   app.get("/add-sale", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/add-sale.html"));
-  });
-
-  // users route loads user-manager.html
-  app.get("/users", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/user-manager.html"));
+    res.render("add-sale");
   });
 
   app.get("/signup", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/members");
+      res.render("members");
     }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
+    res.render("signup");
   });
 
   app.get("/login", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/members");
+      res.render("members");
     }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.render("login");
   });
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("members");
   });
 };
